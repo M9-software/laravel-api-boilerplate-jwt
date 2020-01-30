@@ -16,6 +16,7 @@ What I made is really simple: an integration of these three packages and a setup
 
 1. run `composer create-project francescomalatesta/laravel-api-boilerplate-jwt myNextProject`;
 2. have a coffee, nothing to do here;
+3. $ php artisan key:generate
 
 Once the project creation procedure will be completed, run the `php artisan migrate` command to install the required tables.
 
@@ -28,7 +29,7 @@ Just be aware that some options in the `config/boilerplate.php` file are changed
 * [How to Build an API-Only JWT-Powered Laravel App](https://www.sitepoint.com/how-to-build-an-api-only-jwt-powered-laravel-app/)
 * [How to Consume Laravel API with AngularJS](https://www.sitepoint.com/how-to-consume-laravel-api-with-angularjs/)
 
-**WARNING:** the articles are old and Laravel 5.1 related. Just use them as "inspiration". Even without updated tutorials, they should be enough. 
+**WARNING:** the articles are old and Laravel 5.1 related. Just use them as "inspiration". Even without updated tutorials, they should be enough.
 
 ## Main Features
 
@@ -65,11 +66,11 @@ return [
 
     // these options are related to the sign-up procedure
     'sign_up' => [
-        
+
         // this option must be set to true if you want to release a token
         // when your user successfully terminates the sign-in procedure
         'release_token' => env('SIGN_UP_RELEASE_TOKEN', false),
-        
+
         // here you can specify some validation rules for your sign-in request
         'validation_rules' => [
             'name' => 'required',
@@ -80,7 +81,7 @@ return [
 
     // these options are related to the login procedure
     'login' => [
-        
+
         // here you can specify some validation rules for your login request
         'validation_rules' => [
             'email' => 'required|email',
@@ -90,7 +91,7 @@ return [
 
     // these options are related to the password recovery procedure
     'forgot_password' => [
-        
+
         // here you can specify some validation rules for your password recovery procedure
         'validation_rules' => [
             'email' => 'required|email'
@@ -99,11 +100,11 @@ return [
 
     // these options are related to the password recovery procedure
     'reset_password' => [
-        
+
         // this option must be set to true if you want to release a token
         // when your user successfully terminates the password reset procedure
         'release_token' => env('PASSWORD_RESET_RELEASE_TOKEN', false),
-        
+
         // here you can specify some validation rules for your password recovery procedure
         'validation_rules' => [
             'token' => 'required',
