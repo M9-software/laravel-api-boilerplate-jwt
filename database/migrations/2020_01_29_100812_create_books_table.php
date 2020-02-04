@@ -15,6 +15,11 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('contact_id')->default(0);
+            $table->integer('consumer_id')->default(0);
+            $table->integer('activity_id')->default(0);
+            $table->integer('area_id')->default(0);
+            $table->integer('mobile')->default(0);
             $table->timestamps();
         });
     }

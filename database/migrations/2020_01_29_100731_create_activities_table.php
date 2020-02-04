@@ -17,8 +17,8 @@ class CreateActivitiesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('consumer_id')->default(0);
             $table->integer('area_id')->default(0);
-            $table->string('activity_title');
-            $table->string('activity_addr');
+            $table->string('activity_title', 255);
+            $table->string('activity_addr', 255);
             $table->integer('start_at')->default(0);
             $table->integer('end_at')->default(0);
             $table->timestamps();

@@ -15,6 +15,10 @@ class CreateAreasTable extends Migration
     {
         Schema::create('areas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title', 255);
+            $table->string('province', 255);
+            $table->string('city', 255);
+            $table->string('address', 255);
             $table->timestamps();
         });
     }
