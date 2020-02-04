@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Area extends Model
+class ContactInfo extends Model
 {
     //
-    protected $table = 'area';
 }

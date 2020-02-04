@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Activity extends Model
+class Contact extends Model
 {
     //
-    protected $table = 'activity';
 }
